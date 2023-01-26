@@ -8,6 +8,8 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private float _speed = 1.0f;
     private float _oldMousPositionX;
     private float _eulerY;
+
+    [SerializeField] Animator _animator;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +21,7 @@ public class PlayerMove : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0)){
             _oldMousPositionX = Input.mousePosition.x;
+            _animator.SetBool("Run", true);
         }
         if (Input.GetMouseButton(0)){
             Vector3 newPosition =transform.position + transform.forward * _speed * Time.deltaTime;
@@ -30,7 +33,9 @@ public class PlayerMove : MonoBehaviour
             _eulerY = Mathf.Clamp(_eulerY, -70, 70);// ограничение максимального значения
             transform.eulerAngles = new Vector3(0,_eulerY, 0); // поворот
         }
-
+         if (Input.GetMouseButtonUp(0)){
+            _animator.SetBool("Run", false);
+         }
         
 
 
