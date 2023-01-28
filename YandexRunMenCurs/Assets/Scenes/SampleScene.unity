@@ -566,7 +566,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &381727985
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2654,7 +2654,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.20392157, g: 0.8156863, b: 1, a: 0.48235294}
+  m_Color: {r: 1, g: 0, b: 0, a: 0.5}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3017,6 +3017,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1705635748}
+  - component: {fileID: 1705635749}
+  - component: {fileID: 1705635750}
   m_Layer: 0
   m_Name: Gate
   m_TagString: Untagged
@@ -3042,6 +3044,42 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1705635749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1705635747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcf071488265849ecad875cb7a3336f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _text: {fileID: 1740027716}
+  _topImage: {fileID: 2048571601}
+  _glassImage: {fileID: 1552227850}
+  _colorPositive: {r: 0.20392157, g: 0.8156863, b: 1, a: 1}
+  _colorNegative: {r: 1, g: 0, b: 0, a: 1}
+  _expandLable: {fileID: 736324219}
+  _shrinkLable: {fileID: 1802216342}
+  _upLable: {fileID: 1038720186}
+  _downLable: {fileID: 381727984}
+--- !u!114 &1705635750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1705635747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d6562270f5274ea48ea5134ed0a63e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _value: -14
+  _deformationType: 0
+  _gateApearance: {fileID: 1705635749}
 --- !u!1 &1740027714
 GameObject:
   m_ObjectHideFlags: 0
@@ -3054,7 +3092,7 @@ GameObject:
   - component: {fileID: 1740027717}
   - component: {fileID: 1740027716}
   m_Layer: 0
-  m_Name: Text (TMP)
+  m_Name: Text (Value)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3100,7 +3138,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: +150
+  m_text: -14
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3238,7 +3276,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1802216343
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3571,7 +3609,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.20392157, g: 0.8156863, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
