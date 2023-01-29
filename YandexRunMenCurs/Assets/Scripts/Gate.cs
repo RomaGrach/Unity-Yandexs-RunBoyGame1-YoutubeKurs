@@ -10,5 +10,17 @@ public class Gate : MonoBehaviour
     private void OnValidate() {
         _gateApearance.UpdateVisual(_deformationType, _value);
     }
-    
+
+    private void OnTriggerEnter(Collider other) {
+        PlayerModifier playerModifier =other.attachedRigidbody.GetComponent<PlayerModifier>();
+        if (playerModifier){
+            if (_deformationType == DeformationType.Width){
+                playerModifier.AddWidth(_value);
+            } else if (_deformationType == DeformationType.Height){
+                playerModifier.AddHeight(_value);
+            }
+
+            
+        }
+    }
 }
