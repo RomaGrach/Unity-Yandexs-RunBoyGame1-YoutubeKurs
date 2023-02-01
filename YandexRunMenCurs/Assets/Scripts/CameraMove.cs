@@ -14,6 +14,8 @@ public class CameraMove : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
-        transform.position = _target.position;
+        if (_target){
+            transform.position = _target.position;
+        }
     }
 }
