@@ -8,6 +8,8 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] private GameObject _startMenu;
     [SerializeField] TextMeshProUGUI _LevelText;
+    [SerializeField] GameObject _finishWindow;
+
     private void Start() {
         _LevelText.text = SceneManager.GetActiveScene().name;
     }
@@ -18,6 +20,19 @@ public class GameManager : MonoBehaviour
         _startMenu.SetActive(false);
         FindObjectOfType<PlayerBehaviour>().Play();
     }
-    
-    
+
+    public void ShowFinishWindow()
+    {
+        _finishWindow.SetActive(true);
+    }
+
+    public void NextLevel()
+    {
+        int next = SceneManager.GetActiveScene().buildIndex + 1;
+        if (next < SceneManager.sceneCountInBuildSettings)
+        {
+            SceneManager.LoadScene(next);
+        }
+    }
+
 }

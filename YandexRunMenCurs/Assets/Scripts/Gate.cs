@@ -19,7 +19,7 @@ public class Gate : MonoBehaviour
             } else if (_deformationType == DeformationType.Height){
                 playerModifier.AddHeight(_value);
             }
-
+            Destroy(gameObject);
             
         }
     }

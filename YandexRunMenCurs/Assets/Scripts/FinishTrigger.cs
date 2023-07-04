@@ -8,6 +8,7 @@ public class FinishTrigger : MonoBehaviour
         PlayerBehaviour playerBehaviour =other.attachedRigidbody.GetComponent<PlayerBehaviour>();
         if (playerBehaviour){
             playerBehaviour.StartFinishBehaviour();
+            FindObjectOfType<GameManager>().ShowFinishWindow();
         }
     }
 }
