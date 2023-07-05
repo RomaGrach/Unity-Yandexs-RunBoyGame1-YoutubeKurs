@@ -15,7 +15,8 @@ public class PlayerModifier : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        SetWidth(Progress.Instance.Width);
+        SetHeight(Progress.Instance.Height);
     }
 
     // Update is called once per frame
@@ -39,6 +40,17 @@ public class PlayerModifier : MonoBehaviour
     }
     public void AddHeight(int value) {
         _height += value;
+    }
+
+    public void SetWidth(int value)
+    {
+        _width = value;
+        UpdateWidth();
+    }
+
+    public void SetHeight(int value)
+    {
+        _height = value;
     }
 
     public void HitBarrier() {
