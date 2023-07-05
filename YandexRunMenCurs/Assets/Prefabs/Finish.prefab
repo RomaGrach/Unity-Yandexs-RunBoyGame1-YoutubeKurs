@@ -110,6 +110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8696c529df054209ad8e1cf48602c89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _bricksEffectPrefab: {fileID: 9053772046164358811, guid: a06c50a0b9fb040e28ab0471b278e7c3, type: 3}
 --- !u!1 &3388956839076247980
 GameObject:
   m_ObjectHideFlags: 0
@@ -288,6 +289,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8696c529df054209ad8e1cf48602c89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _bricksEffectPrefab: {fileID: 9053772046164358811, guid: a06c50a0b9fb040e28ab0471b278e7c3, type: 3}
 --- !u!1 &3388956839589407592
 GameObject:
   m_ObjectHideFlags: 0
@@ -618,6 +620,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8696c529df054209ad8e1cf48602c89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _bricksEffectPrefab: {fileID: 9053772046164358811, guid: a06c50a0b9fb040e28ab0471b278e7c3, type: 3}
 --- !u!1 &3388956840266927034
 GameObject:
   m_ObjectHideFlags: 0
@@ -728,6 +731,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8696c529df054209ad8e1cf48602c89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _bricksEffectPrefab: {fileID: 9053772046164358811, guid: a06c50a0b9fb040e28ab0471b278e7c3, type: 3}
 --- !u!1 &3388956840537876858
 GameObject:
   m_ObjectHideFlags: 0
@@ -838,6 +842,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8696c529df054209ad8e1cf48602c89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _bricksEffectPrefab: {fileID: 9053772046164358811, guid: a06c50a0b9fb040e28ab0471b278e7c3, type: 3}
 --- !u!1001 &3388956838518475493
 PrefabInstance:
   m_ObjectHideFlags: 0

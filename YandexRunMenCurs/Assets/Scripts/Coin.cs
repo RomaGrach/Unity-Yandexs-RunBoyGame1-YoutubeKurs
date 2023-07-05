@@ -5,6 +5,7 @@ using UnityEngine;
 public class Coin : MonoBehaviour
 {
     [SerializeField] private float _rotationSpeed = 180f;
+    [SerializeField] GameObject _effectPrefab;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,5 +20,6 @@ public class Coin : MonoBehaviour
     private void OnTriggerEnter(Collider other) {
         FindObjectOfType<CoinManager>().AddOne();
         Destroy(gameObject);
+        Instantiate(_effectPrefab, transform.position, transform.rotation);
     }
 }
