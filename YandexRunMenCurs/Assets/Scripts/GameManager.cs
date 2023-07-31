@@ -20,6 +20,9 @@ public class GameManager : MonoBehaviour
     {
         _startMenu.SetActive(false);
         FindObjectOfType<PlayerBehaviour>().Play();
+#if UNITY_WEBGL
+        Progress.Instance.Save();
+#endif
     }
 
     public void ShowFinishWindow()
@@ -33,6 +36,8 @@ public class GameManager : MonoBehaviour
         if (next < SceneManager.sceneCountInBuildSettings)
         {
             _coinManager.SaveToProgress();
+            Progress.Instance.PlayerInfo.Level = SceneManager.GetActiveScene().buildIndex;
+            Progress.Instance.Save();
             SceneManager.LoadScene(next);
         }
     }

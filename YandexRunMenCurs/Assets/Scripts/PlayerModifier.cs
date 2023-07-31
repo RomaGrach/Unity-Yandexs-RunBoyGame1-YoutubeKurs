@@ -15,8 +15,8 @@ public class PlayerModifier : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        SetWidth(Progress.Instance.Width);
-        SetHeight(Progress.Instance.Height);
+        SetWidth(Progress.Instance.PlayerInfo.Width);
+        SetHeight(Progress.Instance.PlayerInfo.Height);
     }
 
     // Update is called once per frame

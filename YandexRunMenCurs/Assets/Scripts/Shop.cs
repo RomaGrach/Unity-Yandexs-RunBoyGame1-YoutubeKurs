@@ -17,9 +17,9 @@ public class Shop : MonoBehaviour
         if (_coinManager.NumberOfCoins >= 20)
         {
             _coinManager.SpendMoney(20);
-            Progress.Instance.Coins = _coinManager.NumberOfCoins;
-            Progress.Instance.Width += 25;
-            _playerModifier.SetWidth(Progress.Instance.Width);
+            Progress.Instance.PlayerInfo.Coins = _coinManager.NumberOfCoins;
+            Progress.Instance.PlayerInfo.Width += 25;
+            _playerModifier.SetWidth(Progress.Instance.PlayerInfo.Width);
         }
     }
 
@@ -28,9 +28,9 @@ public class Shop : MonoBehaviour
         if (_coinManager.NumberOfCoins >= 20)
         { 
             _coinManager.SpendMoney(20);
-            Progress.Instance.Coins = _coinManager.NumberOfCoins;
-            Progress.Instance.Height += 25;
-            _playerModifier.SetHeight(Progress.Instance.Height);
+            Progress.Instance.PlayerInfo.Coins = _coinManager.NumberOfCoins;
+            Progress.Instance.PlayerInfo.Height += 25;
+            _playerModifier.SetHeight(Progress.Instance.PlayerInfo.Height);
         }
     }
 
