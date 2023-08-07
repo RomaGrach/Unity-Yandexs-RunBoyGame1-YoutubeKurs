@@ -59,5 +59,14 @@ public class Progress : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Backspace))
+        {
+            PlayerInfo = new PlayerInfo();
+            Save();
+        }
+    }
+
 
 }

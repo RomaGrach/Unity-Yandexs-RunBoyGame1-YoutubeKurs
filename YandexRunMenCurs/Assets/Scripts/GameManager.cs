@@ -3,15 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
+using System.Runtime.InteropServices;
 
 public class GameManager : MonoBehaviour
 {
+    [DllImport("__Internal")]
+    private static extern void ShowAdv();
     [SerializeField] private GameObject _startMenu;
     [SerializeField] TextMeshProUGUI _LevelText;
     [SerializeField] GameObject _finishWindow;
     [SerializeField] CoinManager _coinManager;
 
     private void Start() {
+        if ((SceneManager.GetActiveScene().buildIndex+1) % 3 == 0)
+        {
+            ShowAdv();
+        }
         _LevelText.text = SceneManager.GetActiveScene().name;
     }
 
